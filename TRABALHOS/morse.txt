@@ -1,10 +1,4 @@
-Teste 01
-Entrada
 .- -... -.-. -.. . ..-. --. .... .. .--- -.- .-.. -- -. --- .--. --.- .-. ... - ..- ...- .-- -..- -.-- --..
-Saída
- ABCDEFGHIJKLMNOPQRSTUVWXYZ
-Teste 02
-Entrada
+ABCDEFGHIJKLMNOPQRSTUVWXYZ
 -.-. .- -.. .-* -- .- -.-. .- -.-. --- -. --- ... . ..- --. .- .-.. .... ---
-Saída
  CAD[AJLPRW] MACACO NO SEU GALHO
