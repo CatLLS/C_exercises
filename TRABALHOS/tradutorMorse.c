@@ -62,9 +62,27 @@ void tratarInput(int tamanhoMSG, char msgMatriz[][5]){
     
 }
 
-char resolverCorrompimento(){ //FAZER (helô/Lívia!!!)
-    //retornar letras possíveis (?)
-}
+char resolverCorrompimento(char *msgCompleta, char alfabetoMorse[][5], char alfabeto[], int tamanhoAlfabeto){ //FAZER (helô/Lívia!!!)
+    //retornar letras possíveis
+    static char candidatos[28];
+    int count = 0;
+
+    for(int i = 0; i < tamanhoAlfabeto; i++){
+           if (strncmp(msgCompleta, alfabetoMorse[i], strlen(msgCompleta)-1) == 0){
+            candidatos[count++] = alfabeto[i];
+        }
+    }
+    candidatos[count] = '\0';
+        for (int i=0; i<count-1; i++){
+        for (int j=i+1; j<count; j++){
+            if (candidatos[i] > candidatos[j]){
+                char tmp = candidatos[i];
+                candidatos[i] = candidatos[j];
+                candidatos[j] = tmp;
+            }
+        }
+    }
+} 
 
 void decodificar(){//FAZER (helô/Lívia!!!)
     resolverCorrompimento();
