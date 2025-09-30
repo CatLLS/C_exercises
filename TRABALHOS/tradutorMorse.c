@@ -113,7 +113,7 @@ int main(){
         /*for (int i=0; i< (tamanhoMSG/5) && msgTratada[i][0] != '\0'; i++){
             printf("\nPalavra %d:>%s<", i+1, msgTratada[i]);
         }*/
-        //inserir gato
+        
         printf("\nHmm, os nossos detetives chegaram a conclusão de que a sua mensagem significa: \n");
         printf("\n%s\n", msgDecodificada);
         printf("\n                  ╱|、                   \n                (˚ˎ 。7  \n                 |、˜〵          \n                じしˍ,)ノ");
