@@ -2,22 +2,21 @@
 #include <string.h>
 
 void tratarInput(int tamanhoMSG, char msgMatriz[][5]){
-    int espacoNoFinal=0;
 
     printf("\nDigite a mensagem codificada: ");
-    char msgCompleta[tamanhoMSG+espacoNoFinal];
-    fgets(msgCompleta,tamanhoMSG,stdin);
-    msgCompleta[strcspn(msgCompleta, "\n")] = '\0';
+    char msgINPUT[tamanhoMSG];
+    fgets(msgINPUT,tamanhoMSG,stdin);
+    msgINPUT[strcspn(msgINPUT, "\n")] = '\0';
     
     
     char letra[5]={0};
     int currentLetraIndex=0;
     int indexPalavrasMSGfinal=0;
 
-    for(int i=0; i< strlen(msgCompleta);i++){
+    for(int i=0; i< strlen(msgINPUT);i++){
         
         
-        if(msgCompleta[i]==' '){
+        if(msgINPUT[i]==' '){
             if (currentLetraIndex>0){
                 letra[currentLetraIndex] = '\0';
                 
@@ -27,7 +26,7 @@ void tratarInput(int tamanhoMSG, char msgMatriz[][5]){
                 currentLetraIndex=0;
             }
             
-            if (msgCompleta[i+1] == ' '){
+            if (msgINPUT[i+1] == ' '){
                 strncpy(msgMatriz[indexPalavrasMSGfinal], "_", 5);
                 indexPalavrasMSGfinal++;
                 i++;
@@ -36,7 +35,7 @@ void tratarInput(int tamanhoMSG, char msgMatriz[][5]){
             
         }else{
             if (currentLetraIndex < 4){
-                letra[currentLetraIndex] = msgCompleta[i];
+                letra[currentLetraIndex] = msgINPUT[i];
                 currentLetraIndex++;
             }
         }
