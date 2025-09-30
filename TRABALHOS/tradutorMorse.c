@@ -34,7 +34,7 @@ void tratarInput(int tamanhoMSG, char msgMatriz[][5]){
             
             
         }else{
-            if (currentLetraIndex < 4){
+            if (currentLetraIndex <= 4){
                 letra[currentLetraIndex] = msgINPUT[i];
                 currentLetraIndex++;
             }
